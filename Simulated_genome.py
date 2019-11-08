@@ -87,7 +87,6 @@ cleanPQSfile()
 
 var_gene_lengths = {"lengths": [], "mean": 0, "median": 0, "std_dev": 0}
 
-# get mean and median length of var genes in the species
 def calc_var_length():
     """Retrieve the mean, median, and standard deviation of var/pir gene lengths in the genome."""
     for gene in seqs_info:  # loop over all transcripts in the genome
@@ -204,7 +203,6 @@ def g4s_on_chromosome(chromosome):
                 list_of_G4s_on_chromosome[g4].append([chromosome, item[1]])
     return list_of_G4s_on_chromosome
 
-# finds the distance to nearest PQS when given a chromosome, position, and length of a var gene
 def find_nearest_g4(chromosome, position, length, start_end):
     """Compute the distance to the nearest PQS when given the chromosome, position, and length of a var/pir gene. If a
     PQS is located within the coding sequence of a pir/var gene, the distance to the nearest PQS = 0. "
@@ -395,7 +393,6 @@ def display_distributions():
     plt.xlabel("actual distance from nearest PQS (bp)")
     plt.ylabel("count")
     plt.show()
-
 
 # print the results to the console
 print("mean distance in null dataset: ", statistics.mean(simulated_distances))
