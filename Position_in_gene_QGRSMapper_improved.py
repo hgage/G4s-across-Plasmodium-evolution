@@ -62,7 +62,7 @@ cleanlocations()
 summary_data = defaultdict(list)  # store data for the position of each PQS relative to the start codon of nearest gene
 def find_position_in_gene():
     """Determine the position of each PQS relative to the start codon of its nearest gene, and store the data in
-    summary_data
+    summary_data.
     """
     for G4 in G4_locations:  # loop over all PQSs
         for entry in G4_locations[G4]:
@@ -91,6 +91,7 @@ def makecsv():
             d.append(
                 [data, entry[0]["Nearest gene ID"], entry[0]["Position in gene"], entry[0]["Gene annotation"]])
 
+    # write to csv file
     with open ("/Users/HunterGage/Desktop/G4 Positions Relative to Start Codon/P.praefalciparum_QGRSMapper_codon.csv", 'w') as summaryfile:
         headers = ["Location", "Nearest gene ID", "Position in gene", "Gene Annotation"]
         filewriter = csv.writer(summaryfile)
