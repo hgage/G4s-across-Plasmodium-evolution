@@ -1,5 +1,5 @@
 """This script compares the concordance of QGRS Mapper and experimental G4-seq data by searching for instances where
- the locations of PQSs predicted by QGRS Mapper overlap with a G4-seq window"""
+ the locations of PQSs predicted by QGRS Mapper overlap with a G4-seq window."""
 
 # import some useful libraries
 import csv
