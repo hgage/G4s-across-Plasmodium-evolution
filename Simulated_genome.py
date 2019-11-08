@@ -116,10 +116,6 @@ def sample_from_normal_distribution():
 
 sample_from_normal_distribution()
 
-''' retrieves the chromosome lengths and chromosome IDs for the species and adds them to lists
-    if the chromosome is a contig, the chromosome ID remains the same (eg: "PADLG01_00_01")
-    if the chromosome is not a contig, the chromosome ID is the numeric value of the chromosome (eg: "1", "2", "10", etc) '''
-
 chromosome_sizes = []  # stores the size of each chromosome
 chromosome_IDs = []  # stores each chromosome ID (eg: "1", "2", "10", "PADLG01_00_01")
 def get_chromosome_sizes():
