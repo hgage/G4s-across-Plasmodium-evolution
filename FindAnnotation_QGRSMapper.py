@@ -66,7 +66,6 @@ def cleanPQSfile():
 
 cleanPQSfile()
 
-# adds identifier to each chromosome in the PQS dict so that they can be compared to the chromosomes in the FASTA file
 clean_PQS_dict = defaultdict(list)
 clean_PQS_dict_RC = defaultdict(list)
 def cleanchromosomes():
@@ -288,7 +287,6 @@ def parseannotations_RC():
 
 parseannotations_RC()
 
-#creates csv file of summary data
 def makecsv():
     """Create csv file of the data contained in summary_data and summary_data_RC, with columns for: "Location",
     "Chromosome", "Sense or reverse-complement", "Coding, upstream, or downstream?", "Nearest gene ID", "Strand",
