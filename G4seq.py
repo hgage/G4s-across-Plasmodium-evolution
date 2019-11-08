@@ -48,7 +48,8 @@ cleanG4seqfile()
 data = []  # for each PQS, stores whether the PQS was found, as well as the G4-seq window it was found within
 def compare_lists():
     """For each PQS found by QGRS Mapper, determine whether its location overlaps with a G4-seq window, and store this
-    information in data. If the PQS overlaps with a G4-seq window, also retrieve the location of G4-seq window."""
+    information in data. If the PQS overlaps with a G4-seq window, also retrieve the location of G4-seq window.
+    """
     for PQS in PQS_dict:  # loop over all PQSs on the sense strand
         for item in PQS_dict[PQS]:
             found = False  # track whether the PQS was found within a G4-seq window
@@ -88,7 +89,8 @@ compare_lists()
 G4seq_found_by_algorithm = []  # for each G4-seq window, stores whether it overlaps with a PQS
 def compare_lists_G4seq():
     """For each G4-seq window, determine whether its location overlaps with a PQS predicted by QGRS Mapper, and store
-    this information in G4seq_found_by_algorithm."""
+    this information in G4seq_found_by_algorithm.
+    """
     for G4_seq in G4seqs:  # loop over all of the G4 seq windows on the sense strand
         found = False  # track whether a PQS was found within the G4-seq window
         for PQS in PQS_dict:  # loop over all of the PQSs on the sense strand
